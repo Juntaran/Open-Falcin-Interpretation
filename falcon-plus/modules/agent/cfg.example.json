@@ -1,0 +1,55 @@
+{
+    "debug": true,          // 更详细的信息
+    "hostname": "",
+    "ip": "",
+    "plugin": {
+        "enabled": false,
+        "dir": "./plugin",
+        "git": "https://github.com/open-falcon/plugin.git",
+        "logs": "./logs"    // 插件日志存放位置
+    },
+    "heartbeat": {
+        "enabled": true,
+        "addr": "127.0.0.1:6030",       // RPC地址
+        "interval": 60,     // 60s心跳一次
+        "timeout": 1000
+    },
+    "transfer": {
+        "enabled": true,
+        "addrs": [
+            "127.0.0.1:8433",           // RPC地址
+            "127.0.0.1:8433"
+        ],
+        "interval": 60,
+        "timeout": 1000
+    },
+    "http": {
+        "enabled": true,
+        "listen": ":1988",
+        "backdoor": false               // 后门  /run -d "hostname"  可以执行shell，调试比较方便  http/run.go
+    },
+    "collector": {
+        "ifacePrefix": ["eth", "em"],   // 只获取eth/em开头的网卡信息
+        "mountPoint": []
+    },
+    "default_tags": {
+    },
+    "ignore": {                         // 忽略的信息，不上报
+        "cpu.busy": true,
+        "df.bytes.free": true,
+        "df.bytes.total": true,
+        "df.bytes.used": true,
+        "df.bytes.used.percent": true,
+        "df.inodes.total": true,
+        "df.inodes.free": true,
+        "df.inodes.used": true,
+        "df.inodes.used.percent": true,
+        "mem.memtotal": true,
+        "mem.memused": true,
+        "mem.memused.percent": true,
+        "mem.memfree": true,
+        "mem.swaptotal": true,
+        "mem.swapused": true,
+        "mem.swapfree": true
+    }
+}
