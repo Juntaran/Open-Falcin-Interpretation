@@ -29,10 +29,10 @@ func main() {
 	// global config
 	g.ParseConfig(*cfg)
 	// proc
-	proc.Start()
+	proc.Start()		// 这里只在log中记录了proc.Start()
 
-	sender.Start()
-	receiver.Start()
+	sender.Start()		// 初始化数据发送服务
+	receiver.Start()	// 接收服务，包括RPC和Socket
 
 	// http
 	http.Start()

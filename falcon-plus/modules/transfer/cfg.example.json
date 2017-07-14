@@ -1,33 +1,33 @@
 {
     "debug": true,
     "minStep": 30,
-    "http": {
+    "http": {                       // 表示是否开启该http端口，该端口为控制端口，主要用来对transfer发送控制命令、统计命令、debug命令等
         "enabled": true,
         "listen": "0.0.0.0:6060"
     },
-    "rpc": {
+    "rpc": {                        // 是否开启该jsonrpc数据接收端口, Agent发送数据使用的就是该端口
         "enabled": true,
         "listen": "0.0.0.0:8433"
     },
-    "socket": {
+    "socket": {                     // 即将废弃，telnet方式的数据接收端口
         "enabled": true,
         "listen": "0.0.0.0:4444",
         "timeout": 3600
     },
     "judge": {
-        "enabled": true,
-        "batch": 200,
-        "connTimeout": 1000,
-        "callTimeout": 5000,
-        "maxConns": 32,
-        "maxIdle": 32,
-        "replicas": 500,
-        "cluster": {
+        "enabled": true,            // 表示是否开启向judge发送数据
+        "batch": 200,               // 数据转发的批量大小，可以加快发送速度，建议保持默认值
+        "connTimeout": 1000,        // 与后端建立连接的超时时间
+        "callTimeout": 5000,        // 发送数据给后端的超时时间
+        "maxConns": 32,             // 连接池最大连接数
+        "maxIdle": 32,              // 连接池最大空闲连接数
+        "replicas": 500,            // 一致性hash算法需要的节点数量副本
+        "cluster": {                // k-v字典，表示后端的judge列表，key为judge名字，value为具体ip:port
             "judge-00" : "127.0.0.1:6080"
         }
     },
-    "graph": {
-        "enabled": true,
+    "graph": {                      
+        "enabled": true,            // 表示是否开启向graph发送数据
         "batch": 200,
         "connTimeout": 1000,
         "callTimeout": 5000,
@@ -39,13 +39,13 @@
         }
     },
     "tsdb": {
-        "enabled": false,
+        "enabled": false,           // 表示是否开启向open tsdb发送数据
         "batch": 200,
         "connTimeout": 1000,
         "callTimeout": 5000,
         "maxConns": 32,
         "maxIdle": 32,
-        "retry": 3,
-        "address": "127.0.0.1:8088"
+        "retry": 3,                 // 连接后端的重试次数和发送数据的重试次数
+        "address": "127.0.0.1:8088" // tsdb地址或者tsdb集群vip地址, 通过tcp连接tsdb
     }
 }

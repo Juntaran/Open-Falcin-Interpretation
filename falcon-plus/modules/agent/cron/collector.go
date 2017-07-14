@@ -37,7 +37,7 @@ func Collect() {
 }
 
 func collect(sec int64, fns []func() []*model.MetricValue) {
-	t := time.NewTicker(time.Second * time.Duration(sec)).C
+	t := time.NewTicker(time.Second * time.Duration(sec)).C		// 定时器 .C 是一个带缓冲的通道
 	for {
 		<-t
 

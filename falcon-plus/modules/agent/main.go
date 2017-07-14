@@ -52,8 +52,10 @@ func main() {
 	cron.SyncBuiltinMetrics()   // 同步metric
 	cron.SyncTrustableIps()     // 获取内置ip
 
+	// 收集信息
 	cron.Collect()
 
+	// 默认1988端口
 	go http.Start()
 
 	select {}
