@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/open-falcon/falcon-plus/modules/transfer/g"
-	"github.com/open-falcon/falcon-plus/modules/transfer/http"
-	"github.com/open-falcon/falcon-plus/modules/transfer/proc"
-	"github.com/open-falcon/falcon-plus/modules/transfer/receiver"
-	"github.com/open-falcon/falcon-plus/modules/transfer/sender"
+	"falcon-plus/modules/transfer/g"
+	"falcon-plus/modules/transfer/http"
+	"falcon-plus/modules/transfer/proc"
+	"falcon-plus/modules/transfer/receiver"
+	"falcon-plus/modules/transfer/sender"
 	"os"
 )
 

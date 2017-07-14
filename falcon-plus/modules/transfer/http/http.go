@@ -3,7 +3,7 @@ package http
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/open-falcon/falcon-plus/modules/transfer/g"
+	"falcon-plus/modules/transfer/g"
 	"io/ioutil"
 	"log"
 	"net/http"

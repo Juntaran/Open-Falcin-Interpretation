@@ -2,7 +2,7 @@ package db
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/common/model"
+	"falcon-plus/common/model"
 	"log"
 	"time"
 )

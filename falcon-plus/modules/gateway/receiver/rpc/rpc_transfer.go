@@ -5,11 +5,11 @@ import (
 	"time"
 
 	pfc "github.com/niean/goperfcounter"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	cutils "github.com/open-falcon/falcon-plus/common/utils"
+	cmodel "falcon-plus/common/model"
+	cutils "falcon-plus/common/utils"
 
-	"github.com/open-falcon/falcon-plus/modules/gateway/g"
-	"github.com/open-falcon/falcon-plus/modules/gateway/sender"
+	"falcon-plus/modules/gateway/g"
+	"falcon-plus/modules/gateway/sender"
 )
 
 type Transfer int

@@ -3,8 +3,8 @@ package dashboard_screen
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	m "github.com/open-falcon/falcon-plus/modules/api/app/model/dashboard"
+	h "falcon-plus/modules/api/app/helper"
+	m "falcon-plus/modules/api/app/model/dashboard"
 	"strconv"
 )
 

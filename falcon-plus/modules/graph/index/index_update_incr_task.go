@@ -8,8 +8,8 @@ import (
 	nsema "github.com/toolkits/concurrent/semaphore"
 	ntime "github.com/toolkits/time"
 
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
-	proc "github.com/open-falcon/falcon-plus/modules/graph/proc"
+	"falcon-plus/modules/graph/g"
+	proc "falcon-plus/modules/graph/proc"
 )
 
 const (

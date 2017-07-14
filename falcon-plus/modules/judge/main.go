@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/open-falcon/falcon-plus/modules/judge/cron"
-	"github.com/open-falcon/falcon-plus/modules/judge/g"
-	"github.com/open-falcon/falcon-plus/modules/judge/http"
-	"github.com/open-falcon/falcon-plus/modules/judge/rpc"
-	"github.com/open-falcon/falcon-plus/modules/judge/store"
+	"falcon-plus/modules/judge/cron"
+	"falcon-plus/modules/judge/g"
+	"falcon-plus/modules/judge/http"
+	"falcon-plus/modules/judge/rpc"
+	"falcon-plus/modules/judge/store"
 	"os"
 )
 

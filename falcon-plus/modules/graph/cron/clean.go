@@ -19,9 +19,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
-	"github.com/open-falcon/falcon-plus/modules/graph/index"
-	"github.com/open-falcon/falcon-plus/modules/graph/store"
+	"falcon-plus/modules/graph/g"
+	"falcon-plus/modules/graph/index"
+	"falcon-plus/modules/graph/store"
 
 	pfc "github.com/niean/goperfcounter"
 )

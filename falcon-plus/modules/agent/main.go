@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/open-falcon/falcon-plus/modules/agent/cron"
-	"github.com/open-falcon/falcon-plus/modules/agent/funcs"
-	"github.com/open-falcon/falcon-plus/modules/agent/g"
-	"github.com/open-falcon/falcon-plus/modules/agent/http"
+	"falcon-plus/modules/agent/cron"
+	"falcon-plus/modules/agent/funcs"
+	"falcon-plus/modules/agent/g"
+	"falcon-plus/modules/agent/http"
 	"os"
 )
 
@@ -32,7 +32,7 @@ func main() {
 	g.ParseConfig(*cfg)         // 解析参数
 
 	// 初始化全局变量
-	if g.Config().Debug {
+	if g.Config().Debug {			// 设置日志级别
 		g.InitLog("debug")
 	} else {
 		g.InitLog("info")

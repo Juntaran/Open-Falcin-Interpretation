@@ -6,9 +6,9 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/garyburd/redigo/redis"
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
-	eventmodel "github.com/open-falcon/falcon-plus/modules/alarm/model/event"
+	cmodel "falcon-plus/common/model"
+	"falcon-plus/modules/alarm/g"
+	eventmodel "falcon-plus/modules/alarm/model/event"
 )
 
 func ReadHighEvent() {

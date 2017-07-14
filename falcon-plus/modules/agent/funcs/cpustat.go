@@ -1,7 +1,7 @@
 package funcs
 
 import (
-	"github.com/open-falcon/falcon-plus/common/model"
+	"falcon-plus/common/model"
 	"github.com/toolkits/nux"
 	"sync"
 )
@@ -11,11 +11,13 @@ const (
 )
 
 var (
-	procStatHistory [historyCount]*nux.ProcStat
+	procStatHistory [historyCount]*nux.ProcStat		// 一个长度为2的slice，slice基本结构为 *nux.ProcStat
 	psLock          = new(sync.RWMutex)
 )
 
 func UpdateCpuStat() error {
+
+	// CurrentProcStat() 函数读取 /proc/stat 文件，获得CPU和进程当前状态，返回自定义的ProcStat结构体
 	ps, err := nux.CurrentProcStat()
 	if err != nil {
 		return err
@@ -31,6 +33,7 @@ func UpdateCpuStat() error {
 	return nil
 }
 
+// 求差值
 func deltaTotal() uint64 {
 	if procStatHistory[1] == nil {
 		return 0

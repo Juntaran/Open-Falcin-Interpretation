@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/open-falcon/falcon-plus/modules/nodata/collector"
-	"github.com/open-falcon/falcon-plus/modules/nodata/config"
-	"github.com/open-falcon/falcon-plus/modules/nodata/sender"
+	"falcon-plus/modules/nodata/collector"
+	"falcon-plus/modules/nodata/config"
+	"falcon-plus/modules/nodata/sender"
 )
 
 func configDebugHttpRoutes() {

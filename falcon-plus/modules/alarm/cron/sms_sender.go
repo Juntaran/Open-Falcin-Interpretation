@@ -2,9 +2,9 @@ package cron
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/open-falcon/falcon-plus/modules/alarm/g"
-	"github.com/open-falcon/falcon-plus/modules/alarm/model"
-	"github.com/open-falcon/falcon-plus/modules/alarm/redi"
+	"falcon-plus/modules/alarm/g"
+	"falcon-plus/modules/alarm/model"
+	"falcon-plus/modules/alarm/redi"
 	"github.com/toolkits/net/httplib"
 	"time"
 )

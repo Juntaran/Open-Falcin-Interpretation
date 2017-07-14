@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/open-falcon/falcon-plus/modules/api/config"
+	"falcon-plus/modules/api/config"
 )
 
 type Team struct {

@@ -3,25 +3,30 @@ package cron
 import (
 	"time"
 
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/agent/funcs"
-	"github.com/open-falcon/falcon-plus/modules/agent/g"
+	"falcon-plus/common/model"
+	"falcon-plus/modules/agent/funcs"
+	"falcon-plus/modules/agent/g"
 )
 
+
 func InitDataHistory() {
+
+	// 每隔一秒执行一次  UpdateCpuStat() 和 UpdateDiskStats()
 	for {
 		funcs.UpdateCpuStat()
 		funcs.UpdateDiskStats()
-		time.Sleep(g.COLLECT_INTERVAL)
+		time.Sleep(g.COLLECT_INTERVAL)		// g.COLLECT_INTERVAL 为 1s
 	}
 }
 
 func Collect() {
 
+	// 检查cfg的transfer是否开启
 	if !g.Config().Transfer.Enabled {
 		return
 	}
 
+	// 检查cfg的transfer是否填写RPC地址
 	if len(g.Config().Transfer.Addrs) == 0 {
 		return
 	}

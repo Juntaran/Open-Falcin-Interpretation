@@ -2,7 +2,7 @@ package funcs
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/common/model"
+	"falcon-plus/common/model"
 	"github.com/toolkits/nux"
 	"log"
 	"strings"
@@ -15,6 +15,8 @@ var (
 )
 
 func UpdateDiskStats() error {
+
+	// ListDiskStats() 通过读取 /proc/diskstats 来获取硬盘状态，返回每块硬盘的状态，以DiskStats结构体slice返回
 	dsList, err := nux.ListDiskStats()
 	if err != nil {
 		return err

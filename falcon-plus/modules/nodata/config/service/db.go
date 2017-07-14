@@ -6,7 +6,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/open-falcon/falcon-plus/modules/nodata/g"
+	"falcon-plus/modules/nodata/g"
 )
 
 const (

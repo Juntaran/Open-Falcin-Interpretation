@@ -2,8 +2,8 @@ package db
 
 import (
 	"fmt"
-	"github.com/open-falcon/falcon-plus/common/model"
-	"github.com/open-falcon/falcon-plus/modules/hbs/g"
+	"falcon-plus/common/model"
+	"falcon-plus/modules/hbs/g"
 	"log"
 )
 

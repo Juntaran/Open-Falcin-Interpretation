@@ -4,17 +4,17 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/alarm"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/dashboard_graph"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/dashboard_screen"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/expression"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/graph"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/host"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/mockcfg"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/strategy"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/template"
-	"github.com/open-falcon/falcon-plus/modules/api/app/controller/uic"
-	"github.com/open-falcon/falcon-plus/modules/api/app/utils"
+	"falcon-plus/modules/api/app/controller/alarm"
+	"falcon-plus/modules/api/app/controller/dashboard_graph"
+	"falcon-plus/modules/api/app/controller/dashboard_screen"
+	"falcon-plus/modules/api/app/controller/expression"
+	"falcon-plus/modules/api/app/controller/graph"
+	"falcon-plus/modules/api/app/controller/host"
+	"falcon-plus/modules/api/app/controller/mockcfg"
+	"falcon-plus/modules/api/app/controller/strategy"
+	"falcon-plus/modules/api/app/controller/template"
+	"falcon-plus/modules/api/app/controller/uic"
+	"falcon-plus/modules/api/app/utils"
 )
 
 func StartGin(port string, r *gin.Engine) {

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/open-falcon/falcon-plus/common/sdk/sender"
-	"github.com/open-falcon/falcon-plus/modules/aggregator/g"
-	"github.com/open-falcon/falcon-plus/modules/aggregator/sdk"
+	"falcon-plus/common/sdk/sender"
+	"falcon-plus/modules/aggregator/g"
+	"falcon-plus/modules/aggregator/sdk"
 )
 
 func WorkerRun(item *g.Cluster) {

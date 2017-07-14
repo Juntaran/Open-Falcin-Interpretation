@@ -7,9 +7,9 @@ import (
 	"log"
 	"sync"
 
-	cmodel "github.com/open-falcon/falcon-plus/common/model"
+	cmodel "falcon-plus/common/model"
 
-	"github.com/open-falcon/falcon-plus/modules/graph/g"
+	"falcon-plus/modules/graph/g"
 )
 
 var GraphItems *GraphItemMap

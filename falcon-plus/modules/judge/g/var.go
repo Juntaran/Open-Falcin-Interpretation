@@ -1,7 +1,7 @@
 package g
 
 import (
-	"github.com/open-falcon/falcon-plus/common/model"
+	"falcon-plus/common/model"
 	"sync"
 	"time"
 )

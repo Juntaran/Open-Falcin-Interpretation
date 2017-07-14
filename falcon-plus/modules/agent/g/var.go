@@ -2,7 +2,7 @@ package g
 
 import (
 	"bytes"
-	"github.com/open-falcon/falcon-plus/common/model"
+	"falcon-plus/common/model"
 	"github.com/toolkits/slice"
 	"log"
 	"net"
@@ -16,7 +16,7 @@ var Root string
 
 func InitRootDir() {
 	var err error
-	Root, err = os.Getwd()
+	Root, err = os.Getwd()		// 返回的是路径的字符串给 Root
 	if err != nil {
 		log.Fatalln("getwd fail:", err)
 	}
@@ -24,7 +24,7 @@ func InitRootDir() {
 
 var LocalIp string
 
-func InitLocalIp() {
+func InitLocalIp() {			// 把Ip存给 LocalIp
 	if Config().Heartbeat.Enabled {
 		conn, err := net.DialTimeout("tcp", Config().Heartbeat.Addr, time.Second*10)
 		if err != nil {
@@ -42,7 +42,7 @@ var (
 	HbsClient *SingleConnRpcClient
 )
 
-func InitRpcClients() {
+func InitRpcClients() {		// 初始化RPC客户端，填充RPC server的地址和超时时间
 	if Config().Heartbeat.Enabled {
 		HbsClient = &SingleConnRpcClient{
 			RpcServer: Config().Heartbeat.Addr,

@@ -6,9 +6,9 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
-	h "github.com/open-falcon/falcon-plus/modules/api/app/helper"
-	"github.com/open-falcon/falcon-plus/modules/api/app/model/uic"
-	"github.com/open-falcon/falcon-plus/modules/api/app/utils"
+	h "falcon-plus/modules/api/app/helper"
+	"falcon-plus/modules/api/app/model/uic"
+	"falcon-plus/modules/api/app/utils"
 )
 
 type APILoginInput struct {
