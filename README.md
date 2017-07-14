@@ -4,5 +4,7 @@ Interpretion of Open-Falcon
 
 批量修改 import 
 
-    cd $GOPATH/src/falcon-plus
-    sed -i "s/github.com\/open-falcon\/falcon-plus/falcon-plus/g" `grep github.com/open-falcon/falcon-plus -rl`
+```bash
+cd $GOPATH/src/falcon-plus
+sed -i "s/github.com\/open-falcon\/falcon-plus/falcon-plus/g" `grep github.com/open-falcon/falcon-plus -rl`
+```
